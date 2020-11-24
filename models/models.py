@@ -9,8 +9,8 @@ class Pos(models.Model):
     codigo_mann = fields.Char(
         string='Codigo Mann',related="product_tmpl_id.codigo_man",store=True,
         required=False)
-    marca_filtro_id = fields.Many2one(
-        string='Marca Filtro',related="product_tmpl_id.marca_filtro_id",store=True,
+    marca_filtro = fields.Many2one(
+        string='Marca Filtro',related="product_tmpl_id.marca_filtro_id.name",store=True,
         required=False)
     pos_categ = fields.Char(
         string='Categegoria',related="product_tmpl_id.pos_categ_id.name",store=True,

@@ -10,9 +10,9 @@
 
                  [<t t-esc="orderline.get_product().codigo_mann"/>]
                 </t>
-                <t t-if="orderline.get_product().marca_filtro_id">
+                <t t-if="orderline.get_product().marca_filtro">
 
-                 [<t t-esc="orderline.get_product().marca_filtro_id"/>]
+                 [<t t-esc="orderline.get_product().marca_filtro"/>]
                 </t>
                 <t t-if="orderline.get_product().pos_categ">
 
@@ -30,8 +30,8 @@
             <t t-if="product.codigo_mann">
                [<t t-esc="product.codigo_mann"/>]
             </t>
-            <t t-if="product.marca_filtro_id">
-               [<t t-esc="product.marca_filtro_id"/>]
+            <t t-if="product.marca_filtro">
+               [<t t-esc="product.marca_filtro"/>]
             </t>
             <t t-if="product.pos_categ">
                [<t t-esc="product.pos_categ"/>]
@@ -47,8 +47,8 @@
             <t t-if="line.get_product().codigo_mann">
                [<t t-esc="line.get_product().codigo_mann"/>]
         </t>
-            <t t-if="line.get_product().marca_filtro_id">
-               [<t t-esc="line.get_product().marca_filtro_id"/>]
+            <t t-if="line.get_product().marca_filtro">
+               [<t t-esc="line.get_product().marca_filtro"/>]
         </t>
             <t t-if="line.get_product().pos_categ">
                [<t t-esc="line.get_product().pos_categ"/>]
