@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-extend="PosTicket">
+        <t t-jquery="t[t-esc='orderline.get_product().display_name']" t-operation="after">
+                <t t-if="orderline.get_product().default_code">
+
+                 [<t t-esc="orderline.get_product().default_code"/>]
+                </t>
+                <t t-if="orderline.get_product().codigo_mann">
+
+                 [<t t-esc="orderline.get_product().codigo_mann"/>]
+                </t>
+                <t t-if="orderline.get_product().marca_filtro_id">
+
+                 [<t t-esc="orderline.get_product().marca_filtro_id"/>]
+                </t>
+                <t t-if="orderline.get_product().pos_categ">
+
+                 [<t t-esc="orderline.get_product().pos_categ"/>]
+                </t>
+
+        </t>
+    </t>
+    <t t-extend="Product">
+        <t t-jquery=".product-name" t-operation="append">
+
+            <t t-if="product.default_code">
+               [<t t-esc="product.default_code"/>]
+            </t>
+            <t t-if="product.codigo_mann">
+               [<t t-esc="product.codigo_mann"/>]
+            </t>
+            <t t-if="product.marca_filtro_id">
+               [<t t-esc="product.marca_filtro_id"/>]
+            </t>
+            <t t-if="product.pos_categ">
+               [<t t-esc="product.pos_categ"/>]
+            </t>
+
+        </t>
+    </t>
+    <t t-extend="Orderline">
+        <t t-jquery=".product-name"  t-operation="append">
+            <t t-if="line.get_product().default_code">
+               [<t t-esc="line.get_product().default_code"/>]
+        </t>
+            <t t-if="line.get_product().codigo_mann">
+               [<t t-esc="line.get_product().codigo_mann"/>]
+        </t>
+            <t t-if="line.get_product().marca_filtro_id">
+               [<t t-esc="line.get_product().marca_filtro_id"/>]
+        </t>
+            <t t-if="line.get_product().pos_categ">
+               [<t t-esc="line.get_product().pos_categ"/>]
+        </t>
+
+
+        </t>
+    </t>
+</templates>
