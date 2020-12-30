@@ -15,3 +15,8 @@ class Pos(models.Model):
     pos_categ = fields.Char(
         string='Categegoria',related="product_tmpl_id.pos_categ_id.name",store=True,
         required=False)
+    ubicacion = fields.Char(
+        string='Ubicación Stock',related="product_tmpl_id.ubicacion_id.name",store=True,
+        required=False)
+
+

@@ -18,6 +18,10 @@
 
                  [<t t-esc="orderline.get_product().pos_categ"/>]
                 </t>
+                <t t-if="orderline.get_product().ubicacion">
+
+                 [<t t-esc="orderline.get_product().ubicacion"/>]
+                </t>
 
         </t>
     </t>
@@ -36,6 +40,9 @@
             <t t-if="product.pos_categ">
                [<t t-esc="product.pos_categ"/>]
             </t>
+            <t t-if="product.ubicacion">
+               [<t t-esc="product.ubicacion"/>]
+            </t>
 
         </t>
     </t>
@@ -52,6 +59,9 @@
         </t>
             <t t-if="line.get_product().pos_categ">
                [<t t-esc="line.get_product().pos_categ"/>]
+        </t>
+            <t t-if="line.get_product().ubicacion">
+               [<t t-esc="line.get_product().ubicacion"/>]
         </t>
 
 
